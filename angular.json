@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "eCommApp"
+    }
+  },
+  "defaultProject": "eCommApp",
+  "cli": {
+    "analytics": false
+  }
 }

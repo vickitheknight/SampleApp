@@ -1,0 +1,49 @@
+<div class="container-body">
+    <div class="form-group row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <h3>{{prod_status}} Products</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-2">Product Name
+                </div>
+                <div class="col-md-4 text-center">
+                    <input type="text" class="form-control" id="productname" name="productname"
+                        [(ngModel)]="tempvalue.productName" />
+                </div>
+                <div class="col-md-4 text-right">
+                <a routerLink="/products">Products Dashboard</a>
+                </div>
+
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-2">Product Price
+                </div>
+                <div class="col-md-4 text-center">
+                    <input type="text" class="form-control" id="product_Price" name="product_Price"
+                        [(ngModel)]="tempvalue.productPrice" />
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-2">Product Description
+                </div>
+                <div class="col-md-4 text-center">
+                    <textarea type="text" class="form-control" id="product_Description" name="product_Description"
+                        [(ngModel)]="tempvalue.productDescription"></textarea>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+
+                <div class="col-md-5 text-center">
+                    <input type="button" class="btn btn-primary" id="submit" name="submit" value="Submit"
+                         (click)=addProduct() />
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

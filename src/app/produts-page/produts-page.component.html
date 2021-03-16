@@ -1,0 +1,26 @@
+<h3>The Products</h3>
+<br>
+<div class="form-group row">
+<div class="col-md-10 text-right">
+    <a routerLink="/addproduct">Add Products</a>
+    </div>
+</div>
+<ng-container *ngFor="let prods of productShow">
+    <div class="form-group row" *ngIf="prods.name"  >
+        <div class="col-md-1"></div>
+
+        <div class="col-md-2">
+            <div>{{prods.name}}</div>
+            <br>
+            <div>{{prods.price}}</div>
+            <i class="fa fa-star" aria-hidden="true" [ngStyle]="{'color': prods.isFav ? 'Yellow' : 'grey' }" (click)="addfav(prods)"></i>
+        </div>
+    </div>
+    <div class="form-group row" *ngIf="prods.name"  >
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+           <input type="button" class="btn btn-primary" (click)="edit(prods)" id="edit" name="edit" value="Edit" >
+        </div>
+    </div>
+    <hr *ngIf="prods.name">
+</ng-container>

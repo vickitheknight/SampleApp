@@ -1,0 +1,33 @@
+<form id="loginForm">
+    <br>
+    <div class="card">
+    
+        <div class="card-body">
+         <h3>{{isLogin}}</h3>
+            <div class="form-group row">
+                <div class="col-md-2"><label><b>E-Mail</b></label>
+                </div>
+                <div class="col-md-4 text-center">
+                    <input type="text" class="form-control" id="uname" name="uname"
+                    [(ngModel)]="user_name" />
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <div class="col-md-2"><label><b>Password</b></label>
+                </div>
+                <div class="col-md-4 text-center">
+                    <input type="text" class="form-control" id="pwd"  name="pwd"
+                    [(ngModel)]="password" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-12 text-center">
+                    <input type="button" class="btn btn-primary" value="Submit" (click)="login()" >
+                </div>
+            </div>
+            <div *ngIf="isLogin=='Login'">* Please click<input type="button" class="btn btn-link" value="Sign Up" (click)="isLoginChange('l')" >if you are not registered yet</div>
+            <div *ngIf="isLogin!='Login'">* Please click<input type="button" class="btn btn-link" value="Login" (click)="isLoginChange('s')">if you already registers</div>
+        </div>
+    </div>
+</form>
